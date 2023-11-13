@@ -31,7 +31,7 @@ a,a:hover{
     color: #0195BB;
 }
 .subheadings{
-    color: #ea702d;
+    color: #f25524;
     text-align: center;
 }
 .subtitle{
@@ -59,23 +59,18 @@ a,a:hover{
     padding: 0;
     color: #000;
 }
+.dropdown-menu li ul li{
+    padding-bottom: 10px;
+}
 .dropdown-menu li ul li a{
     padding: 0 0 10px;
+    white-space: normal;
 }
 .navbar-toggler:focus{
     outline: none !important;
     box-shadow: none;
 }
-.technology-partner img{
-    max-width: 230px;
-}
-.technology-scroll{
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
+/* services css starts */
 .services-tabs .nav-link{
     padding: 10px 30px;
     border-radius: 25px;
@@ -104,8 +99,12 @@ a,a:hover{
     background-color: #fff;
 }
 .servicestab-content .card{
-    padding: 85px 15px 15px 15px;
+    padding: 60px 15px 15px 15px;
     border: 1px solid  #0195BB;
+    height: 100%;
+}
+.servicestab-content .card p{
+    font-size: 14px;
 }
 .servicestab-content .card img{
     height: 65px;
@@ -113,9 +112,48 @@ a,a:hover{
 .servicestab-content .shadow{
     box-shadow: 0 0rem 0.5rem 0.1rem rgb(0,0,0,0.15) !important;
 }
+/* services css ends */
 .footer-logo img{
     height: 100px;
 }
+/* services css */
+.cloud-title h3{
+    color: #0195BB;
+}
+.services-grid{
+    padding: 0px 0 40px;
+}
+.text-label{
+    font-size: 1.5rem;
+}
+.text-label .span{
+    color: #0195BB;
+}
+/* ends */
+.bgImage{
+    position: relative;
+}
+.cloud-title{
+    position: sticky;
+    top: 80px;
+    padding: 10px 0;
+    background-color: #fff;
+}
+/* animation css */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* animation css ends */
 @media (min-width:999px){
     .offcanvas{
         display: contents;
@@ -128,7 +166,7 @@ a,a:hover{
         align-items: center;
         top: 100%;
         left: auto;
-        right: auto;
+        right: 150px;
     }
     .nav-item:hover .dropdown-menu{
         border: 0;
@@ -140,9 +178,17 @@ a,a:hover{
         visibility: visible;
         opacity: 1;
         transition: all 0.6s;
+        width: 40%;
     }
     .dropdown-menu .dropdown-item:hover{
         background-color: transparent;
+    }
+    .dropdown-menu .border-bottom{
+        border-bottom-width: 2px !important;
+        border-bottom-color: #000 !important;
+    }
+    .homeBanner .imageHeight{
+        height: 500px;
     }
     
 }
@@ -150,8 +196,17 @@ a,a:hover{
     .offcanvas.offcanvas-start{
         width: 326px;
     }
-    .nav-link{
+    .navbar-nav .nav-link{
         padding: 10px 15px;
+    }
+    .navbar-nav .nav-item{
+        border-bottom: 2px solid #dee2e6;
+    }
+    .nav-item .dropdown-menu{
+        display: block;
+    }
+    .services-tabs .nav-link{
+        padding: 10px 12px;
     }
     .services-tabs .nav-pills{
         white-space: nowrap;
@@ -159,6 +214,24 @@ a,a:hover{
         flex-wrap: nowrap;
         overflow: auto;
         /* justify-content: start !important; */
+    }
+    .service-btn{
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown-menu{
+        padding: 0;
+    }
+    .dropdown-menu .dropdown-item{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .dropdown-list{
+        padding: 0 15px 0 15px;
+    }
+    .dropdown-list ul{
+        padding-left: 20px;
+        list-style: disc;
     }
     .customMbl-scroll{
         display: flex;
@@ -177,5 +250,16 @@ a,a:hover{
     }
     .btn-primary.fixed-bottom{
         font-size: 18px;
+    }
+    .cloud-title{
+        background-color: #fff;
+        padding: 10px 15px;
+        /* box-shadow: 0 0 10px rgba(0,0,0,.1); */
+    }    
+    .services-grid {
+        padding: 0px 0 20px;
+    }
+    .homeBanner .imageHeight{
+        padding: 15px 0;
     }
 }
